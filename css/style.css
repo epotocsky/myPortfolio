@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFFDD8;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+#full-screen-nav{
+    display: none;
+}
+
+a{
+    background: transparent;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px; 
+}
+
+.skip a:focus{
+    position: relative;
+    top: 0px;
+}
+
+ul{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 1em;
+}
+
+#logo{
+    display: flex;
+    font-family: 'Over the Rainbow', sans-serif;
+	width: 30%;
+	font-size: 35px;
+	font-weight: 400;
+	padding-left: 30px;
+	padding-top: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+
+#name-mobile{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color: solid black;
+}
+
+
+.memoji img{
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    right: 25%;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    padding-right: 30px;
+    color: black
+}
+
+.nav_links{
+    padding-top: -220px;
+    color: black;
+}
+
+a:visited{
+    color: inherit;
+}
+
+.current{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    padding: 30px;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+.footer-contents a{
+    font-size: 1rem;
+    margin: 8px;
+    color: white;
+}
+
+.footer-contents a:hover{
+    color: #FFFDD8;
+}
+
+.content{
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.content img{
+    margin-top: 10px;
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 1rem; 
+    font-family: 'Outfit', sans-serif;
+}
+
+#aboutme, #resume, #mywork{
+    font-family: 'Outfit', sans-serif; 
+    font-size: 3rem;
+    padding-top: 15px;
+}
+
+#summary{
+    vertical-align: middle;
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    text-align: center;
+    bottom: 140px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#description {
+    padding: 20px 20px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#qualifications{
+    font-size: 28px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-content{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.resume-content p{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#click{
+    padding-top: 2px;
+    font-style: italic;
+}
+
+.resume-content img{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-image: linear-gradient(45deg, #ffb6c1, #f380bf) 1;
+    border:#f380bf;
+    padding-bottom: 20px;
+}
+
+.resume-content img:hover{
+    transform: scale(1);
+    transition-duration: 0.5s;
+    box-shadow: 4px 10px 20px 4px rgba(252,70,170,1);
+    border-radius: 22px;
+}
+
+/* GRID ON WORK PAGE NEED TO FIX */
+.work-content{
+    display: grid;
+    grid-template-rows: repeat(1fr, 6);
+
+}
+
+.work-content a{
+    font-family: 'Outfit', sans-serif; 
+    font-size: 1.5rem;
+    padding-top: 15px;
+    color: solid black;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .memoji img{
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        right: 30%;
+    }
+
+    #summary{
+        font-size: 2rem;
+        bottom: 180px;
+    }
+
+    .content img{
+        width: 75%;
+    }
+} 
