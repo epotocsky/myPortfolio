@@ -4,7 +4,8 @@
 }
 
 body{
-    background-color: #FFFDD8;
+    background-image: url('../imgs/background.jpg');
+    background-attachment: fixed;
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
@@ -51,26 +52,6 @@ ul{
 }
 
 
-#name-mobile{
-    font-family: 'Abril Fatface', sans-serif;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    color: solid black;
-}
-
-
-.memoji img{
-    max-height: 250px;
-    width: auto;
-    height: auto;
-    position: absolute;
-    display: block;
-    margin: 0 auto;
-    right: 25%;
-}
-
 a{
     text-decoration: none;
     font-size: 20px;
@@ -109,6 +90,7 @@ footer{
     bottom: 0;
     left: 0;
     margin-top: auto;
+    height: 100px;
 }
 
 .footer-contents a{
@@ -121,6 +103,53 @@ footer{
     color: #FFFDD8;
 }
 
+p{
+    font-size: 1.25rem; 
+    font-family: 'Outfit', sans-serif;
+}
+
+#footerp{
+    font-size: 1rem;
+    padding-top: 10px;
+    color: white;
+}
+
+
+/* Home Page */
+#name-mobile{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color: solid black;
+}
+
+.memoji img{
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    right: 22.5%;
+}
+
+#summary{
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 1;
+    bottom: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+
+}
+
+/*About, Resume*/
 .content{
     display: flex;
     flex-flow: wrap;
@@ -131,32 +160,17 @@ footer{
 
 .content img{
     margin-top: 10px;
-    width: 50%;
+    width: 70%;
     height: auto;
     margin-bottom: 10px;
 }
 
-p{
-    font-size: 1rem; 
-    font-family: 'Outfit', sans-serif;
-}
-
-#aboutme, #resume, #mywork{
+#aboutme, #contactme, #resume, #mywork{
     font-family: 'Outfit', sans-serif; 
     font-size: 3rem;
     padding-top: 15px;
 }
 
-#summary{
-    vertical-align: middle;
-    position: absolute;
-    margin: auto;
-    z-index: 1;
-    text-align: center;
-    bottom: 140px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
 
 #description {
     padding: 20px 20px;
@@ -191,7 +205,7 @@ p{
     font-style: italic;
 }
 
-.resume-content img{
+.resume-content img, #article img{
     padding-left: 20px;
     padding-right: 20px;
     border-image: linear-gradient(45deg, #ffb6c1, #f380bf) 1;
@@ -206,21 +220,173 @@ p{
     border-radius: 22px;
 }
 
-/* GRID ON WORK PAGE NEED TO FIX */
-.work-content{
+/* GRID ON WORK PAGE*/
+.work{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
     display: grid;
-    grid-template-rows: repeat(1fr, 6);
-
+    grid-template-rows: repeat (2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+#graphics, #writing, #video, #fun{
+    overflow: hidden;
 }
 
-.work-content a{
+#graphics:hover, #writing:hover, #video:hover, #fun:hover{
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,.9));
+}
+
+/* CONTACT*/
+input[type="text"], select, textarea{
+    width: 100%;
+	padding: 12px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	margin-right: 10px;
+}
+
+input[type=submit] {
+	background-color: black;
+	color: lightblue;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+input[type=submit]:hover {
+	background-color: #80db86;
+}
+
+.contact_container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+  }
+
+.main_contact{
+    padding-bottom: 20px;
+}
+
+
+/* GRAPHICS */
+.page-header{
     font-family: 'Outfit', sans-serif; 
-    font-size: 1.5rem;
+    font-size: 3rem;
     padding-top: 15px;
-    color: solid black;
-    font-style: italic;
-    text-decoration: underline;
 }
+
+.main{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+.flipping-cards{
+    margin-top: -3rem;
+    padding: 2rem 0;
+}
+
+.flipping-card-wrapper{
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.flipping-card-item-wrapper{
+    perspective: 150rem;
+    position: relative;
+    width:   340px;
+    height:  400px;
+    margin: 1rem;
+}
+
+.flipping-card-item-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    margin:  1.5rem;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-color: #ffffff;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.18);
+    transition: all 1s;
+}
+
+.flipping-card-item-side-back{
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+flipping-card-item-wrapper:hover .flipping-card-item-side-front{
+    transform: rotateY(-180deg);
+}
+
+.flipping-card-item-wrapper:hover .flipping-card-item-side-back{
+    transform: rotateY(0);
+}
+
+.flipping-card-item-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+.flipping-card-back-wrapper{
+    font-weight: 200;
+    position: relative;
+    top: 25%;
+    left: 0;
+    margin: 2rem;
+    text-align: center;
+}
+
+#description2 {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*WRITING*/
+#article-title{
+    font-family: 'Outfit', sans-serif; 
+    font-size: 2rem;
+    padding: 15px, 10px;
+    font-style: italic;
+}
+
+#article-content{
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .memoji img{

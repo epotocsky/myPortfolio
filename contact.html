@@ -49,10 +49,39 @@
       </ul>
     </nav>
 
+    <main class="main_contact">
+      <h1 id="contactme"> SAY HI! </h1>
+      <div class="contact_container">
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form
+        action="https://formspree.io/f/xrgjznnv"
+        method="POST"
+        >
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+    
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+        
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" placeholder="Your email...">
+        
+        <label for="message">
+          Your message:
+          <textarea id="message" name="message" placeholder="Your message..."></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+
     <footer>
       <div class= "footer-contents">
         <a href="https://www.linkedin.com/in/elizabeth-potocsky/" aria-label="LinkedIn Profile"><i aria-hidden="true" class="fab fa-linkedin-in fa-2x" title="LinkedIn Profile"></i></a>
         <a href="mailto:epoto@umich.edu" aria-label="Email contact"><i aria-hidden="true" class="far fa-envelope fa-2x" title="Email contact"></i></a>
+        <p id = "footerp">© Lizzie Potocsky 2021</p>
       </div>
     </footer>
   </body>
