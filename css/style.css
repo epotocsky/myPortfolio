@@ -610,4 +610,59 @@ p{
 
 }
 
-@media (prefers-reduced-motion){}
+@media (prefers-reduced-motion){
+    .footer-contents a:hover{
+        transform: none;
+    }
+
+    .resume-content img:hover{
+        transform: none;
+    }
+
+    .thumbnail:hover, #graphics:hover, #writing:hover, #video:hover, #fun:hover{
+        transform: none;
+    }
+
+    input[type=submit]:hover{
+        transform: none;
+    }
+
+    .parallax{
+        display: none;
+    }
+
+    .flipping-card-item-side-back{
+        transform: none;
+    }
+    
+    .flipping-card-item-wrapper:hover .flipping-card-item-side-front{
+        transform: none;
+    }
+    
+    .flipping-card-item-wrapper:hover .flipping-card-item-side-back{
+        transform: none;
+    }
+
+    #middle-img img:hover{
+        transform: none;
+    }
+    .gallery img:hover{
+        transform: none;
+    }
+    nav a:hover{
+        transform: none;
+    }
+    .dropbtn:hover{
+    transform: none}
+
+    .dropdown:hover .dropdown-menu{
+        transform: none;
+    }
+
+    .dropdown:hover .dropbtn{
+        transform: none;
+}
+.typewriter{
+    animation-name: none;
+}
+}
