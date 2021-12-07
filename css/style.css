@@ -587,10 +587,27 @@ p{
 
 }
 
+.typewriter{
+    width: 20ch;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+      
+
 /*WORK*/
 .work{
     grid-template-columns: repeat(4, auto);
 }
+
 }
 
 @media (prefers-reduced-motion){}
