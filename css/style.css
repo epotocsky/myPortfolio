@@ -165,12 +165,18 @@ p{
     margin-bottom: 10px;
 }
 
-#aboutme, #contactme, #resume, #mywork{
+#aboutme, #contactme, #resume{
     font-family: 'Outfit', sans-serif; 
     font-size: 3rem;
     padding-top: 15px;
 }
 
+#mywork, .page-header{
+    font-family: 'Outfit', sans-serif; 
+    font-size: 2.25rem;
+    padding-top: 15px;
+    padding-left: 20px; 
+}
 
 #description {
     padding: 20px 20px;
@@ -284,11 +290,6 @@ input[type=submit]:hover {
 
 
 /* GRAPHICS */
-.page-header{
-    font-family: 'Outfit', sans-serif; 
-    font-size: 3rem;
-    padding-top: 15px;
-}
 
 .main{
     font-family: 'Outfit', sans-serif;
@@ -385,7 +386,53 @@ flipping-card-item-wrapper:hover .flipping-card-item-side-front{
     padding-bottom: 20px;
 }
 
+/*VIDEO*/
+.options{
+    padding: 10px;
+	border:2px #f380bf;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
+.video{
+    display: block;
+    width: 95%;
+    border: 5px solid black;
+    margin: 0 auto; 
+}
+
+figcaption{
+    text-align: center;
+}
+
+button{
+    margin-bottom: 5px;
+    flex-basis: 200px;
+    font-size: 1.5rem; 
+    background-color: #FFFDD8;
+    color: black; 
+}
+
+/*FUN*/
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img{
+    border: 10px #f380bf solid;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery img:hover{
+    transform: scale(1.5);
+    z-index: 1;
+    border: 10px #FFFDD8 solid;
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
@@ -407,4 +454,7 @@ flipping-card-item-wrapper:hover .flipping-card-item-side-front{
     .content img{
         width: 75%;
     }
-} 
+}
+@media only screen and (min-width: 1024px){}
+
+@media (prefers-reduced-motion){}
