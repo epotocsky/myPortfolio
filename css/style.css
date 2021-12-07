@@ -9,6 +9,7 @@ body{
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
+    padding-bottom: 106px;
 }
 
 #full-screen-nav{
@@ -25,7 +26,7 @@ a{
     transition: top 1s ease-out;
     z-index: 1;
     position: absolute;
-    top: -40px; 
+    top: -60px; 
 }
 
 .skip a:focus{
@@ -57,7 +58,7 @@ a{
     font-size: 20px;
 }
 
-nav{
+ul{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -85,12 +86,11 @@ footer{
     background-color: black;
     text-align: center;
     width: 100%;
-    position: fixed;
     padding: 30px;
     bottom: 0;
     left: 0;
-    margin-top: auto;
     height: 100px;
+    position: fixed;
 }
 
 .footer-contents a{
@@ -116,37 +116,22 @@ p{
 
 
 /* Home Page */
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 #name-mobile{
     font-family: 'Abril Fatface', sans-serif;
     font-size: 60px;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
     color: solid black;
-}
-
-.memoji img{
-    max-height: 250px;
-    width: auto;
-    height: auto;
-    position: absolute;
-    display: block;
-    margin: 0 auto;
-    right: 22.5%;
 }
 
 #summary{
     text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    z-index: 1;
-    bottom: 100px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    margin: 0;
-
 }
 
 /*About, Resume*/
@@ -244,8 +229,13 @@ p{
     overflow: hidden;
 }
 
-#graphics:hover, #writing:hover, #video:hover, #fun:hover{
+.thumbnail:hover, #graphics:hover, #writing:hover, #video:hover, #fun:hover{
     filter: drop-shadow(10px 10px 10px rgba(0,0,0,.9));
+}
+
+.work-content{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* CONTACT*/
@@ -386,6 +376,10 @@ flipping-card-item-wrapper:hover .flipping-card-item-side-front{
     padding-bottom: 20px;
 }
 
+#middle-img img:hover{
+    filter: drop-shadow(10px 10px 10px rgba(255,105,180));
+}
+
 /*VIDEO*/
 .options{
     padding: 10px;
@@ -435,40 +429,30 @@ button{
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-   @media only screen and (min-width: 768px){
-    .memoji img{
-        max-height: 300px;
-        width: auto;
-        height: auto;
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        right: 30%;
+@media only screen and (min-width: 768px){
+    nav{
+        float: right;
     }
 
-    #summary{
-        font-size: 2rem;
-        bottom: 180px;
-    }
-
-    .content img{
-        width: 75%;
-    }
     #mobile-nav{
         display: none;
     }
     #full-screen-nav{
         display: inline-block;
-        float: right;
     }
-    
+
+    .nav_links{
+        display: inline;
+        
+    }
+
     li{
         display: inline;
     }
 
     li a{
         padding-left: 20px;
+        list-style-type: none;
     }
 
     nav a:hover{
@@ -518,21 +502,7 @@ button{
     .dropdown:hover .dropbtn{
         background-color:#f380bf;
     }
-
-
-/*HOME*/
-#name-mobile{
-    position: relative;
-    bottom: -500px;
-    width: 100%;
-    padding: 0px;
-}
-
-.memoji img{
-    max-height: 400px;
-    right: 25%;
-}
-
+    
 a{
     font-size: 25px;
 }
@@ -540,16 +510,53 @@ a{
 .current{
     font-size: 35px;
 }
-
-#summary{
-    bottom: 70px;
-    padding-bottom: 40px;
+/*HOME*/
+p{
+    font-size: 2rem;
 }
-/*ABOUT, RESUME*/
-#aboutme, #contactme, #resume{
+
+.memoji{
+    text-align: center;
+}
+
+.memoji img{
+    max-height: 500px;
+}
+
+/*ABOUT, RESUME, WORK*/
+#aboutme, #contactme, #resume, #article-title{
     text-align: center;
     margin-top: 75px;
 }
-@media only screen and (min-width: 1024px){}
+
+/*GRAPHICS*/
+#mywork, .page-header{
+    text-align: left;
+    margin-top: 75px;
+}
+
+.flipping-cards{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/*WRITING*/
+#article-content{
+    font-size: 1.5rem;
+}
+
+#article-content1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#middle-img{
+    text-align: center;
+}
+}
+
+@media only screen and (min-width: 1024px){
+    
+}
 
 @media (prefers-reduced-motion){}
