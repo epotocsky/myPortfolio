@@ -134,6 +134,10 @@ p{
     text-align: center;
 }
 
+.parallax{
+    display: none;
+}
+
 /*About, Resume*/
 .content{
     display: flex;
@@ -169,6 +173,10 @@ p{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.bucket1{
+    text-align:center;
 }
 
 #qualifications{
@@ -556,7 +564,33 @@ p{
 }
 
 @media only screen and (min-width: 1024px){
-    
+/*HOME*/
+p{
+    font-size: 1.5rem;
+}
+
+
+.memoji img{
+    max-height: 300px;
+} 
+
+.parallax{
+    display: block;
+    background-image: url(../imgs/headshot1.jpg);
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    perspective: 20px;
+    background-size: 50%;
+
+}
+
+/*WORK*/
+.work{
+    grid-template-columns: repeat(4, auto);
+}
 }
 
 @media (prefers-reduced-motion){}
