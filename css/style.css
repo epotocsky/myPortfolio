@@ -436,6 +436,7 @@ button{
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+   @media only screen and (min-width: 768px){
     .memoji img{
         max-height: 300px;
         width: auto;
@@ -454,6 +455,100 @@ button{
     .content img{
         width: 75%;
     }
+    #mobile-nav{
+        display: none;
+    }
+    #full-screen-nav{
+        display: inline-block;
+        float: right;
+    }
+    
+    li{
+        display: inline;
+    }
+
+    li a{
+        padding-left: 20px;
+    }
+
+    nav a:hover{
+        background-color:#f380bf; 
+        color: black;
+    }
+
+    .dropbtn{
+        background: none;
+        border: none;
+        font: inherit;
+        font-size: 25px;
+        padding-left: 30px; 
+    }
+
+    .dropbtn:hover{
+        background-color: #f380bf;
+    }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        box-shadow:rgba(0, 0, 0, 0.18);
+    }
+
+    .dropdown-menu a{
+        display: block;
+        color: black; 
+        padding: 0.5em 0.5em;
+        display: block;
+    }
+
+    .dropdown-menu a:hover{
+        background: #f380bf;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn{
+        background-color:#f380bf;
+    }
+
+
+/*HOME*/
+#name-mobile{
+    position: relative;
+    bottom: -500px;
+    width: 100%;
+    padding: 0px;
+}
+
+.memoji img{
+    max-height: 400px;
+    right: 25%;
+}
+
+a{
+    font-size: 25px;
+}
+
+.current{
+    font-size: 35px;
+}
+
+#summary{
+    bottom: 70px;
+    padding-bottom: 40px;
+}
+/*ABOUT, RESUME*/
+#aboutme, #contactme, #resume{
+    text-align: center;
+    margin-top: 75px;
 }
 @media only screen and (min-width: 1024px){}
 
